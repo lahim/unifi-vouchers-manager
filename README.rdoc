@@ -1,6 +1,6 @@
 == README
 
-It's a simple UniFi®AP hotspot vouchers manager, where user is able to set start date and end date of validity period. This application should be lunched on the same machine as your UniFi®AP Manager.
+It's a simple UniFi®AP hotspot vouchers manager, where user is able to set start date and end date of validity period. This application should be launched on the same machine as your UniFi®AP Manager.
 
 * Ruby version: 2.0.0p481
 

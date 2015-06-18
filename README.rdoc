@@ -4,7 +4,7 @@ It's a simple UniFi®AP hotspot vouchers manager, where user is able to set star
 
 * Ruby version: 2.0.0p481
 
-* System dependencies: <a href="https://www.ubnt.com/download/">UniFi®AP Manager</a>
+* System dependencies: UniFi®AP Manager -> https://www.ubnt.com/download/
 
 * Database initialization
 <tt>./bin/rake db:fixtures:create_settings</tt>

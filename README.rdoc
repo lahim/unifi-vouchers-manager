@@ -9,7 +9,6 @@ It's a simple UniFi®AP hotspot vouchers manager, where user is able to set star
 * Database initialization
 <tt>./bin/rake db:fixtures:create_settings</tt>
 
-* Services (crontab)
-Add task validate_vouchers to your crontab
-1 0 * * * <HOME_DIR>/bin/rake voucherapp:validate_vouchers
+* Services (crontab): add task validate_vouchers to your crontab:
+<tt>1 0 * * * <HOME_DIR>/bin/rake voucherapp:validate_vouchers</tt>
 

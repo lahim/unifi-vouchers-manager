@@ -1,28 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It's a simple UniFi®AP hotspot vouchers manager, where user is able to set start date and end date of validity period. This application should be lunched on the same machine as your UniFi®AP Manager.
 
-Things you may want to cover:
+* Ruby version: 2.0.0p481
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
+* System dependencies: <a href="https://www.ubnt.com/download/">UniFi®AP Manager</a>
 
 * Database initialization
+<tt>./bin/rake db:fixtures:create_settings</tt>
 
-* How to run the test suite
+* Services (crontab)
+Add task validate_vouchers to your crontab
+1 0 * * * <HOME_DIR>/bin/rake voucherapp:validate_vouchers
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

@@ -1,0 +1,45 @@
+<div class="container">
+	<h1>Listing vouchers</h1>
+	<%= link_to "New voucher", new_voucher_path, :class => 'btn btn-success' %>	
+	<%= link_to "Settings", settings_path, :class => 'btn btn-default pull-right' %>
+
+	<div class="separator"></div>
+</div>
+
+<div class="container table-container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Code</th>
+				<th>Start date</th>
+				<th>End date</th>
+				<th>Duration</th>
+				<th>Note</th>
+				<th>Expired</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @vouchers.each do |voucher| %>
+			<tr>
+				<td><%= voucher.code %></td>
+				<td><%= voucher.info.start_date %></td>
+				<td><%= voucher.info.end_date %></td>
+				<td><%= voucher.duration %>&nbsp;d</td>
+				<td><%= voucher.note %></td>
+				<td>
+					<span class="label <%= voucher.is_expired ? 'label-danger' : 'label-success' %>">
+						<%= voucher.is_expired %>
+					</span>
+				</td>
+				<td>
+					<span><%= link_to "Download", voucher_print_path(voucher, :format => 'pdf'), :class => 'btn btn-sm btn-default' %></span>
+					<span><%= link_to "Show", voucher_path(voucher), :class => 'btn btn-sm btn-info' %></span>
+					<span><%= link_to "Edit", edit_voucher_path(voucher), :class => 'btn btn-sm btn-warning' %></span>
+					<span><%= link_to "Destroy", voucher_path(voucher), method: :delete, data: { confirm: "Are you sure?" }, :class => 'btn btn-sm btn-danger' %></span>
+				</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

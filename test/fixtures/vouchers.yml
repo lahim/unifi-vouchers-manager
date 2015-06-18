@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  create_time: 
+  duration: 
+  note: MyText
+  qos_overwrite: false
+  quota: 
+  used: 
+  admin_id: MyString
+  site_id: MyString
+
+two:
+  code: MyString
+  create_time: 
+  duration: 
+  note: MyText
+  qos_overwrite: false
+  quota: 
+  used: 
+  admin_id: MyString
+  site_id: MyString

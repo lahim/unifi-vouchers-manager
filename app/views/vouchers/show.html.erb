@@ -1,0 +1,54 @@
+<div class="container">
+	<h1>Voucher: <%= @voucher.code %></h1>
+	<div class="separator"></div>
+</div>
+
+<div class="container">
+	<p>
+		<strong>Code:</strong>
+		<%= @voucher.code %>
+	</p>
+
+	<p>
+		<strong>Duration:</strong>
+		<%= @voucher.duration %>&nbsp;d
+	</p>
+
+	<p>
+		<strong>Note:</strong>
+		<%= @voucher.note %>
+	</p>
+
+	<p>
+		<strong>Start date:</strong>
+		<%= @voucher.info.start_date %>
+	</p>
+
+	<p>
+		<strong>End date:</strong>
+		<%= @voucher.info.end_date %>
+	</p>
+
+	<p>
+		<strong>Expired:</strong>
+		<span class="label <%= @voucher.is_expired ? 'label-danger' : 'label-success' %>">
+			<%= @voucher.is_expired %>
+		</span>
+	</p>
+
+	<p>
+		<strong>Admin ID:</strong>
+		<span class="label label-primary"><%= @voucher.admin_id %></span>
+	</p>
+
+	<p>
+		<strong>Site ID:</strong>
+		<span class="label label-primary"><%= @voucher.site_id %></span>
+	</p>
+</div>
+
+<div class="container">
+	<%= link_to "Back", vouchers_path, :class => 'btn btn-default' %>
+	<%= link_to "Download", voucher_print_path(@voucher, :format => 'pdf'), :class => 'btn btn-default' %>
+	<%= link_to "Edit", edit_voucher_path(@voucher), :class => 'btn btn-warning' %>
+</div>

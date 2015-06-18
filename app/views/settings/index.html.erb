@@ -1,0 +1,21 @@
+<div class="container">
+	<h1>Settings</h1>
+	<div class="separator"></div>
+</div>
+
+<div class="container">
+	<p>
+		<strong>Admin ID:</strong>
+		<%= @setting.admin_id %>
+	</p>
+
+	<p>
+		<strong>Site ID:</strong>
+		<%= @setting.site_id %>
+	</p>
+</div>
+
+<div class="container">
+	<%= link_to "Back", vouchers_path, :class => 'btn btn-default' %>
+	<%= link_to "Edit", edit_setting_path(@setting), :class => 'btn btn-warning' %>
+</div>
